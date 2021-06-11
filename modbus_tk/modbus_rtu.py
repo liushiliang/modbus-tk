@@ -179,8 +179,8 @@ class RtuServer(Server):
         interframe_multiplier: 3.5 by default
         interchar_multiplier: 1.5 by default
         """
-        interframe_multiplier = kwargs.pop('interframe_multiplier', 3.5)
-        interchar_multiplier = kwargs.pop('interchar_multiplier', 1.5)
+        interframe_multiplier = kwargs.pop('interframe_multiplier', 20)
+        interchar_multiplier = kwargs.pop('interchar_multiplier', 5)
 
         databank = databank if databank else Databank(error_on_missing_slave=error_on_missing_slave)
         super(RtuServer, self).__init__(databank)
